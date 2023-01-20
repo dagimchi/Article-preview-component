@@ -1,0 +1,121 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  font-size: 0.8125rem;
+  font-family: "Manrope", sans-serif;
+  background: #ecf2f8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+main {
+  max-width: 45.625rem;
+  display: grid;
+  grid-template-columns: 17.8125rem 1fr;
+}
+
+.img-container {
+  display: flex;
+  background: url(../images/drawers.jpg);
+  background-size: cover;
+}
+
+.text-container {
+  padding: 32px 40px;
+  background: #fff;
+}
+
+.heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.25px;
+  color: #48556a;
+  margin-bottom: 0.75rem;
+}
+
+.description {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.12px;
+  color: #6e8098;
+  margin-bottom: 1.25rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.img-avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.author-profile {
+  font-size: 0.8125rem;
+  letter-spacing: 0.12px;
+}
+
+.name {
+  font-weight: 700;
+  color: #48556a;
+}
+
+.date {
+  font-weight: 500;
+  color: #9daec2;
+}
+
+.icon-share {
+  padding: 10px 10px;
+  border-radius: 50%;
+  background: #ecf2f8;
+}
