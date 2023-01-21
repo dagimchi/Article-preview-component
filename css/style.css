@@ -44,21 +44,27 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  padding: 0 20px;
 }
 
 main {
   max-width: 45.625rem;
   display: grid;
   grid-template-columns: 17.8125rem 1fr;
+  box-shadow: 0px 40px 40px -10px #c9d5e180;
+  /* OVERFLOW HIDDEN WILL NOT SUFFICE DUE TO POSITIONED BUBBLE, SET BORDER RADIUS TO GRID CHILD ELEMENTS INSTEAD */
+  /* overflow: hidden; */
 }
 
 .img-container {
+  border-radius: 10px 0 0 10px;
   display: flex;
   background: url(../images/drawers.jpg);
   background-size: cover;
 }
 
 .text-container {
+  border-radius: 0 10px 10px 0;
   padding: 32px 40px;
   background: #fff;
 }
@@ -82,6 +88,7 @@ main {
 }
 
 .footer {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -117,5 +124,71 @@ main {
 .icon-share {
   padding: 10px 10px;
   border-radius: 50%;
-  background: #ecf2f8;
+  background-color: #ecf2f8;
+  cursor: pointer;
+  border: none;
+}
+
+.icon-share.changeBg {
+  background-color: #6e8098;
+}
+
+.icon-img.changeColor {
+  fill: #fff;
+}
+
+.bubble {
+  opacity: 0;
+  /* webkit transition is deprecated */
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(107px, -78px);
+  padding: 18px 37px;
+  background: #48556a;
+  box-shadow: 0px 10px 10px 0px #c9d5e180;
+  border-radius: 10px;
+  display: flex;
+  gap: 21px;
+  justify-content: center;
+  align-items: center;
+}
+
+.bubble::after {
+  content: "";
+  height: 20px;
+  width: 27px;
+  background: #48556a;
+  margin: 0 auto;
+  transform: rotate(225deg);
+  /* border-radius: 0 0 12px 0;
+  margin-top: -22px; */
+  position: absolute;
+  bottom: -0.4rem;
+  right: 0;
+  left: 0;
+}
+
+/* Should come after the original display if doing display;none */
+.bubble.fade {
+  opacity: 1;
+}
+
+.b-text {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 5px;
+  color: #9daec2;
+  text-transform: uppercase;
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }
