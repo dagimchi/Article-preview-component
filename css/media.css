@@ -1,0 +1,26 @@
+@media (max-width: 45.375em) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .img-container {
+    height: 200px;
+    background-position: center -16px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .text-container {
+    padding: 36px 32px 20px 32px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .heading {
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+  }
+
+  .description {
+    margin-bottom: 32px;
+  }
+}
