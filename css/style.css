@@ -45,16 +45,14 @@ body {
   align-items: center;
   gap: 20px;
   padding: 0 20px;
-  padding-right: 20px;
 }
 
+/* MAIN STYLING */
 main {
   max-width: 45.625rem;
   display: grid;
   grid-template-columns: 17.8125rem 1fr;
   box-shadow: 0px 40px 40px -10px #c9d5e180;
-  /* OVERFLOW HIDDEN WILL NOT SUFFICE DUE TO POSITIONED BUBBLE, SET BORDER RADIUS TO GRID CHILD ELEMENTS INSTEAD */
-  /* overflow: hidden; */
 }
 
 .img-container {
@@ -131,14 +129,17 @@ main {
   border: none;
 }
 
+/* CHANGE BTN BACKGROUND COLOR CSS RULE */
 .icon-share.changeBg {
   background-color: #6e8098;
 }
 
+/* CHANGE BTN ICON COLOR CSS RULE */
 .icon-img.changeColor {
   fill: #fff;
 }
 
+/* BTN FOR MOBILE/TABLET VIEW */
 .icon-share-mobile {
   padding: 10px 10px;
   border-radius: 50%;
@@ -152,9 +153,9 @@ main {
   fill: #fff;
 }
 
+/* POPUP FOR DESKTOP */
 .bubble {
   opacity: 0;
-  /* webkit transition is deprecated */
   -webkit-transition: opacity 0.3s ease-in-out;
   -moz-transition: opacity 0.3s ease-in-out;
   -ms-transition: opacity 0.3s ease-in-out;
@@ -174,6 +175,7 @@ main {
   align-items: center;
 }
 
+/* CREATE BUBBLE TAIL SHAPE */
 .bubble::after {
   content: "";
   height: 20px;
@@ -181,15 +183,12 @@ main {
   background: #48556a;
   margin: 0 auto;
   transform: rotate(225deg);
-  /* border-radius: 0 0 12px 0;
-  margin-top: -22px; */
   position: absolute;
   bottom: -0.4rem;
   right: 0;
   left: 0;
 }
 
-/* Should come after the original display if doing display;none */
 .bubble.fade {
   opacity: 1;
 }
@@ -208,14 +207,9 @@ main {
   align-items: center;
 }
 
+/* POPUP FOR TABLET/MOBILE */
 .share-footer {
   position: absolute;
-  /* webkit transition is deprecated */
-  /* -webkit-transition: opacity 0.3s ease-in-out;
-  -moz-transition: opacity 0.3s ease-in-out;
-  -ms-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out; */
   bottom: 0;
   left: 0;
   right: 0;
@@ -224,7 +218,6 @@ main {
   border-radius: 0 0 10px 10px;
   display: flex;
   gap: 21px;
-  /* justify-content: center; */
   align-items: center;
 }
 
